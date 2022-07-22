@@ -1,38 +1,136 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 800;
+  background-color: #202632;
+}
+
+.container {
+  max-width: 540px;
+  margin: 0 auto;
   text-align: center;
+  background-color: #313a49;
+  margin-top: 220px;
+  height: 330px;
+  border-radius: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header {
+  margin-top: 50px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.container .header{
+  padding-top: 50px;
+  color: hsl(150, 100%, 66%);
+  padding-bottom: 30px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container .header h3{
+  letter-spacing: 3px;
+  font-size: 14px;
+}
+
+.container .advice {
+  margin: 0px 50px;
+  font-size: 28px;
+  color: #fff;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.container .line {
+  padding-top: 45px;
+  width: 100%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.container .shuffle-button{
+  background-color: hsl(150, 100%, 66%);
+  width: 65px;
+  height: 65px;
+  border-radius: 100%;
+  cursor: pointer;
+  padding-top: 20px;
+  margin-left: 44%;
+  margin-top: 15px;
+}
+
+
+
+@media screen and (max-width: 510px){
+  .container .advice {
+    font-size: 24px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .container {
+    height: 315px;
+  }
+
+  .container .shuffle-button {
+    margin: 15px 43%;
   }
 }
+
+@media screen and (max-width: 450px){
+  .container .advice {
+    font-size: 20px;
+  }
+
+  .container {
+    height: 300px;
+  }
+
+  .container .shuffle-button {
+    margin: 15px 43%;
+  }
+
+  .container .line svg {
+    width: 200px;
+  }
+}
+
+@media screen and (max-width: 395px){
+  .container .advice {
+    font-size: 16px;
+  }
+
+  .container {
+    height: 280px;
+  }
+
+  .container .shuffle-button{
+    margin: 15px 42%;
+  }
+
+  .container .line svg{
+    width: 210px
+  }
+}
+
+@media screen and (max-width: 335px){
+  .container .advice {
+    font-size: 12px;
+  }
+
+  .container{
+    height: 265px;
+    margin-top: 120px;
+  }
+
+  .container .line svg {
+    width: 200px;
+  }
+
+  .container .shuffle-button {
+    margin: 15px 40%;
+  }
+
+}
+
+
