@@ -22,6 +22,11 @@ function App() {
   const adviceHeight = adviceRef.current?.clientHeight;
   const btnRef = useRef()
   const line = useRef()  
+  const width = useRef()
+  const innerWidth = width.current?.clientWidth
+  console.log(advice)
+
+  console.log(innerWidth + " " + adviceHeight)
 
   if (adviceHeight === 77) {
     btnRef.current.style.marginTop = '31px';
@@ -33,8 +38,52 @@ function App() {
     line.current.style.paddingTop = '100px';
   }
 
+  if (innerWidth <= 510 && adviceHeight === 66) {
+    btnRef.current.style.marginTop = '27px';
+    line.current.style.paddingTop = '70px';
+  }
+
+  if (innerWidth <= 510 && adviceHeight === 33) {
+    btnRef.current.style.marginTop = '38px';
+    line.current.style.paddingTop = '90px';
+  }
+
+  if (innerWidth <= 450 && adviceHeight === 28) {
+    btnRef.current.style.marginTop = '30px';
+    line.current.style.paddingTop = '90px';
+  }
+
+  if (innerWidth <= 450 && adviceHeight === 56) {
+    btnRef.current.style.marginTop = '20px';
+    line.current.style.paddingTop = '70px';
+  }
+
+  if (innerWidth <= 395 && adviceHeight === 22) {
+    btnRef.current.style.marginTop = '32px';
+    line.current.style.paddingTop = '70px';
+  }
+
+  if (innerWidth <= 395 && adviceHeight === 43) {
+    btnRef.current.style.marginTop = '25px';
+    line.current.style.paddingTop = '60px';
+  }
+
+  if (innerWidth <= 335 && adviceHeight === 17) {
+    btnRef.current.style.marginTop = '35px';
+    line.current.style.paddingTop = '60px';
+  }
+
+  if (innerWidth <= 335 && adviceHeight === 34) {
+    btnRef.current.style.marginTop = '25px';
+    line.current.style.paddingTop = '50px';
+  }
+
+  if (adviceHeight >= 115){
+    
+  }
+
   return (
-    <div className="App">
+    <div ref={width} className="App">
       <div className='container'>
         <div className='header'>
           <h3>ADVICE #{adviceId}</h3>
