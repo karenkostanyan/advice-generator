@@ -78,10 +78,6 @@ function App() {
     line.current.style.paddingTop = '50px';
   }
 
-  if (adviceHeight >= 115){
-    
-  }
-
   return (
     <div ref={width} className="App">
       <div className='container'>
